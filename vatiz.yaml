@@ -4,7 +4,7 @@
   become_method: sudo
   tasks:
 
-    - name: Deploy static website
+    - name: Unzip the war file
       copy:
-        src: ./ # We have define a html page
+        src: /var/lib/jenkins/workspace/project4/target/webapptest.war/ # We have define a html page
         dest: /opt/tomcat/webapps/war/
